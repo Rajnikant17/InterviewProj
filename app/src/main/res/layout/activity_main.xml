@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+    </data>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/parentlayout"
+        tools:context=".ui.activities.MainActivity">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_height="420dp"
+            android:paddingTop="4dp"
+            android:paddingLeft="26dp"
+            android:paddingRight="26dp"
+            android:paddingBottom="18dp"
+            android:clipToPadding="false"
+            android:overScrollMode="never" ></androidx.viewpager.widget.ViewPager>
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/indicator"
+            android:layout_below="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:tabIndicatorColor="@color/white"
+            android:layout_marginTop="5dp"
+            app:tabIndicator="@color/white"
+            app:tabGravity="center"
+            app:tabBackground="@drawable/indicator_selector"
+            />
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/progress_bar"
+            style="@style/AVLoadingIndicatorView"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            app:indicatorColor="@color/dark_green"
+            app:indicatorName="BallClipRotateIndicator" />
+
+    </RelativeLayout>
+
+</layout>
